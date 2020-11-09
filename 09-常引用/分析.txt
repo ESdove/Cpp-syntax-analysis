@@ -1,0 +1,16 @@
+﻿
+// int age = 10;
+// ebp-0Ch是age的地址值
+008B2952  mov         dword ptr [ebp-0Ch],0Ah 
+
+// eax == age = 10
+008B2959  mov         eax,dword ptr [ebp-0Ch]  
+// int a = age;
+008B295C  mov         dword ptr [ebp-24h],eax 
+
+// const long &ref = a;
+008B295F  lea         ecx,[ebp-24h]  
+008B2962  mov         dword ptr [ebp-18h],ecx  
+
+// age = 30;
+008B2965  mov         dword ptr [ebp-0Ch],1Eh 
