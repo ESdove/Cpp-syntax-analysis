@@ -1,0 +1,74 @@
+﻿000A19C2  mov         dword ptr [ebp-0Ch],3  
+000A19C9  lea         eax,[ebp-0Ch]  
+000A19CC  mov         dword ptr [ebp-18h],eax  
+000A19CF  mov         eax,dword ptr [ebp-18h]  
+000A19D2  mov         dword ptr [eax],5
+
+
+// int age = 3;
+// ebp-0Ch是age的地址值
+008519C2  mov         dword ptr [ebp-0Ch],3  
+
+// eax == ebp-0Ch，存放着age的地址值
+008519C9  lea         eax,[ebp-0Ch]  
+
+// ebp-18h是指针变量p的地址值
+// 将age的地址值存放到指针变量p所在的存储空间
+// int *p = &age;
+008519CC  mov         dword ptr [ebp-18h],eax  
+ 
+// *p = 5
+// 将age的地址值存放到eax
+008519CF  mov         eax,dword ptr [ebp-18h]  
+// age = 5
+008519D2  mov         dword ptr [eax],5 
+
+
+    20: 	int a = 1;
+00262118  mov         dword ptr [ebp-8],1  
+    21: 	int b = a;
+0026211F  mov         eax,dword ptr [ebp-8]  
+00262122  mov         dword ptr [ebp-14h],eax  
+
+    20: 	int a = 1;
+00972118  mov         dword ptr [ebp-8],1  
+    21: 	int b = 2;
+0097211F  mov         dword ptr [ebp-14h],2  
+    22: 	int c = a + b;
+00972126  mov         eax,dword ptr [ebp-8]  
+00972129  add         eax,dword ptr [ebp-14h]  
+0097212C  mov         dword ptr [ebp-20h],eax
+
+
+
+
+
+// int a = 10;
+// ebp-8是变量a的地址
+0120265E  mov         dword ptr [ebp-8],0Ah 
+
+// int b = 5;
+// ebp-14h是变量b的地址
+01202665  mov         dword ptr [ebp-14h],5 
+
+// eax == a == 10
+0120266C  mov         eax,dword ptr [ebp-8]  
+
+// cmp是compare的简称，比较
+// 比较eax和b的值是否相等
+0120266F  cmp         eax,dword ptr [ebp-14h]  
+
+// jne：jump not equal，比较结果不相等才跳转
+01202672  je         01202683  
+01202674  push        1207BCCh  
+01202679  call        01201389  
+0120267E  add         esp,4  
+01202681  jmp         01202690  
+01202683  push        1207BD4h  
+01202688  call        01201389  
+0120268D  add         esp,4
+// getchar();
+01202690  mov         esi,esp  
+01202692  call        dword ptr ds:[0120B168h]  
+01202698  cmp         esi,esp  
+0120269A  call        0120121C
