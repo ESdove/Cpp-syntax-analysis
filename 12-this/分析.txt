@@ -1,0 +1,33 @@
+﻿Person *p = &person;
+p->m_id = 10;
+p->m_age = 10;
+p->m_height = 10;
+p->display();
+
+
+// Person *p = &person;
+// ebp-14h是person对象的地址
+lea         eax,[ebp-14h]  
+// ebp-20h是指针变量p的地址
+mov         dword ptr [ebp-20h],eax  
+
+// eax存储的是person对象的地址，也就是person.m_id的地址
+// p->m_id = 10;
+mov         eax,dword ptr [ebp-20h]  
+mov         dword ptr [eax],0Ah  
+
+// p->m_age = 10;
+mov         eax,dword ptr [ebp-20h]  
+mov         dword ptr [eax+4],0Ah  
+
+// p->m_height = 10;
+mov         eax,dword ptr [ebp-20h]  
+mov         dword ptr [eax+8],0Ah  
+
+mov         ecx,dword ptr [ebp-20h]  
+call        003B141F
+
+// 原理：如何利用指针间接访问所指向对象的成员变量？
+1.从指针中取出对象的地址
+2.利用对象的地址 + 成员变量的偏移量计算出成员变量的地址
+3.根据成员变量的地址访问成员变量的存储空间
