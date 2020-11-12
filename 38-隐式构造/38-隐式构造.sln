@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "38-隐式构造", "38-隐式构造\38-隐式构造.vcxproj", "{03FF7024-3CAB-4421-80D0-4C008658ABFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Debug|x64.ActiveCfg = Debug|x64
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Debug|x64.Build.0 = Debug|x64
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Debug|x86.ActiveCfg = Debug|Win32
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Debug|x86.Build.0 = Debug|Win32
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Release|x64.ActiveCfg = Release|x64
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Release|x64.Build.0 = Release|x64
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Release|x86.ActiveCfg = Release|Win32
+		{03FF7024-3CAB-4421-80D0-4C008658ABFD}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {886552F2-3777-4151-99C1-D5582CEC0AE9}
+	EndGlobalSection
+EndGlobal
